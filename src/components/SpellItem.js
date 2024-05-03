@@ -51,7 +51,7 @@ template.innerHTML = `
     <div class="spell-item-name"></div>
     <div class="accordion-content">
         <span class="spell-item-added"></span>
-        <button class="spell-item-add">Learn</button>
+        <button class="spell-item-add">Вивчити</button>
         <div class="accordion-icon"></div>
     </div>
 </div>
@@ -135,19 +135,19 @@ class SpellItem extends HTMLElement {
         const spell = this.spell;
 
         this.#setElementContent('spell_name', `<b>${spell.name}</b>`);
-        this.#setElementContent('spell_range', `<b>Range:</b> ${spell.range}`);
-        this.#setElementContent('spell_components', `<b>Components:</b> ${spell.components}`);
-        this.#setElementContent('spell_duration', `<b>Duration:</b> ${spell.duration}`);
-        this.#setElementContent('spell_casting', `<b>Casting Time:</b> ${spell.casting_time}`);
+        this.#setElementContent('spell_range', `<b>Досяжність:</b> ${spell.range}`);
+        this.#setElementContent('spell_components', `<b>Складові:</b> ${spell.components}`);
+        this.#setElementContent('spell_duration', `<b>Тривалість:</b> ${spell.duration}`);
+        this.#setElementContent('spell_casting', `<b>Час заклинання:</b> ${spell.casting_time}`);
         // Break up each section of the spell description
-        this.#setElementContent('spell_description', `<b>Description:</b><br> ${spell.desc.join('<br><br>')}`);
+        this.#setElementContent('spell_description', `<b>Опис:</b><br> ${spell.desc.join('<br><br>')}`);
         
         if (spell.concentration) {
-            this.#setElementContent('spell_concentration', `<b><i>Requires Concentration</i></b>`);
+            this.#setElementContent('spell_concentration', `<b><i>Вимагає концентрації</i></b>`);
         }
 
         if (spell.higher_level !== undefined) {
-            this.#setElementContent('spell_higher_level', `<b>At Higher Levels:</b><br> ${spell.higher_level}`);
+            this.#setElementContent('spell_higher_level', `<b>На вищих рівнях:</b><br> ${spell.higher_level}`);
         }
     }
 
@@ -156,7 +156,7 @@ class SpellItem extends HTMLElement {
         const spellWasAdded = characterSpells.includes(this.spell.name);
 
         if (spellWasAdded) {
-            this.#setElementContent('added_indicator', `<i>Added &#10003;</i>`);
+            this.#setElementContent('added_indicator', `<i>Додано &#10003;</i>`);
         };
     }
 

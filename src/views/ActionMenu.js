@@ -161,16 +161,16 @@ template.innerHTML = `
     }
 }
 </style>
-<button type="button" class="btn-save" data-action="save" tabindex="0">Save</button>
-    <button type="button" class="btn-load btn-dialog" data-action="load" tabindex="-1">Load</button>
-    <button class="btn-new-character btn-dialog" data-action="new" tabindex="-1">New</button>
+<button type="button" class="btn-save" data-action="save" tabindex="0">Зберегти</button>
+    <button type="button" class="btn-load btn-dialog" data-action="load" tabindex="-1">Завантажити</button>
+    <button class="btn-new-character btn-dialog" data-action="new" tabindex="-1">Новий</button>
     <div class="more-action-contain">
-        <button type="button" class="btn-more" data-action="more">More</button>
+        <button type="button" class="btn-more" data-action="more">Більше</button>
         <div class="more-actions closed">
-            <button type="button" class="btn-backup btn-dialog" data-action="backup" tabindex="-1">Backup</button>
-            <button type="button" class="btn-restore-backup btn-dialog" data-action="restore" tabindex="-1">Restore</button>
-            <button type="button" class="btn-delete btn-dialog" data-action="delete" tabindex="-1">Delete</button>
-            <button type="button" class="btn-auth btn-dialog hidden" data-action="auth" tabindex="-1">Login</button>
+            <button type="button" class="btn-backup btn-dialog" data-action="backup" tabindex="-1">Резервне копіювання</button>
+            <button type="button" class="btn-restore-backup btn-dialog" data-action="restore" tabindex="-1">Відновити</button>
+            <button type="button" class="btn-delete btn-dialog" data-action="delete" tabindex="-1">Видалити</button>
+            <button type="button" class="btn-auth btn-dialog hidden" data-action="auth" tabindex="-1">Вхід</button>
         </div>
     </div>
 
@@ -457,7 +457,7 @@ class ActionMenu extends HTMLElement {
         if (currentlyUnsaved) {
             const alert = document.createElement('p');
             alert.classList.add('alert');
-            alert.innerHTML = '<strong>Warning:</strong> You have unsaved changes.';
+            alert.innerHTML = '<strong>Увага:</strong> У вас є незбережені зміни.';
             content.querySelector('form').prepend(alert);
         }
 
@@ -526,7 +526,7 @@ class ActionMenu extends HTMLElement {
             cButton.dataset.key = char.key;
             cButton.classList.add('btn', 'btn-plain');
             cButton.innerHTML = `<span slot="default">${char.summaryHeader}</span>
-            <span slot="confirm" hidden>Are you sure you want to load: ${(char.charname) ? char.charname : '[Unnamed]'}, you have unsaved changes.</span>`;
+            <span slot="confirm" hidden>Ви впевнени що хочете завантажити: ${(char.charname) ? char.charname : '[Unnamed]'}, у вас є незбережені зміни.</span>`;
             if (!currentlyUnsaved) {
                 cButton.confirm = false;
             }

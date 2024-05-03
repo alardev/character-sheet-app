@@ -5,7 +5,7 @@ const template = document.createElement('template');
 template.innerHTML = `
 <link rel="stylesheet" href="./styles.css">
 <header class="page-header">
-    <h1 class="pc-charname" aria-label="Character Name"><field-editable data-name="charname" id="page-top" placeholder="Character Name"></field-editable></h1>
+    <h1 class="pc-charname" aria-label="Character Name"><field-editable data-name="charname" id="page-top" placeholder="Ім\'я персонажа"></field-editable></h1>
 </header>
 `;
 class SheetView extends HTMLElement {

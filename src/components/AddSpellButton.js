@@ -4,7 +4,7 @@ const template = document.createElement('template');
 template.innerHTML = `
 <link rel="stylesheet" href="./styles.css">
 <button type="button" class="btn btn-plain btn-sm" data-level="4">
-    Add Spell
+    Додати закляття
 </button>
 `;
 

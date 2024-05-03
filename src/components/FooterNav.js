@@ -46,7 +46,7 @@ template.innerHTML = `
     }
 </style>
 <ol>
-    <li><a href="#page-top">Top</a></li>
+    <li><a href="#page-top">Нагору</a></li>
 </ol>
 `;
 

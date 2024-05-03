@@ -28,7 +28,7 @@ button {
 </style>
 <slot name="rollbuttons"></slot>
 <div id="dice-result" class="result" aria-live="assertive"></div>
-<button type="button" class="btn-reset" aria-controls="dice-result">Clear</button>
+<button type="button" class="btn-reset" aria-controls="dice-result">Очистити</button>
 `;
 
 class DiceRoller extends HTMLElement {

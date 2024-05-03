@@ -59,7 +59,7 @@ template.innerHTML = `
 <span class="pc-attribute-mod">0</span>
 <label>
     <input type="checkbox" name="pc-save" value=1 />
-    Save
+    Протидія
 </label>
 <span class="pc-save-mod small">0</span>
 <button type="button" data-die="1d20" aria-label="Saving throw"></button>
